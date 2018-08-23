@@ -1,0 +1,1 @@
+A közbeesõ szünetek miatt az óra elmaradt, anyaga bele lett sûrítve a 09-es órába.

@@ -1,0 +1,3 @@
+Hozzunk létre a másodfokú polinomok típusát. Implementáljuk a következõ mûveleteket:
+- Helyettesítési értékének kiszámítása
+- Polinomok összeadása, szorzása számmal

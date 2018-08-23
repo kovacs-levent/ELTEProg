@@ -1,0 +1,5 @@
+ollo   1000
+kalapacs 2000
+ollo   900
+kalapacs 1900
+ollo 1100

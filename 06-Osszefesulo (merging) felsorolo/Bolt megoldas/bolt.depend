@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1521855633 source:c:\users\no\documents\elte\progalap, programozas\gyakorlat\06 - osszefuttato felsorolo\bolt\main.cpp
+	<iostream>
+	"bolt_enor.h"
+
+1521854275 source:c:\users\no\documents\elte\progalap, programozas\gyakorlat\06 - osszefuttato felsorolo\bolt\infile.cpp
+	"infile.h"
+	<iostream>
+	<sstream>
+
+1521854792 c:\users\no\documents\elte\progalap, programozas\gyakorlat\06 - osszefuttato felsorolo\bolt\infile.h
+	"rendeles.h"
+	<fstream>
+
+1521855545 c:\users\no\documents\elte\progalap, programozas\gyakorlat\06 - osszefuttato felsorolo\bolt\rendeles.h
+	<string>
+
+1521855568 c:\users\no\documents\elte\progalap, programozas\gyakorlat\06 - osszefuttato felsorolo\bolt\bolt_enor.h
+	"infile.h"
+	"rendeles.h"
+
+1521855534 source:c:\users\no\documents\elte\progalap, programozas\gyakorlat\06 - osszefuttato felsorolo\bolt\bolt_enor.cpp
+	"bolt_enor.h"
+
+1522145893 source:c:\users\kcfdkk\documents\bolt\infile.cpp
+	"infile.h"
+	<iostream>
+	<sstream>
+	<cstdlib>
+
+1521858392 c:\users\kcfdkk\documents\bolt\infile.h
+	"rendeles.h"
+	<fstream>
+
+1522145882 c:\users\kcfdkk\documents\bolt\rendeles.h
+	<string>
+
+1522146291 source:c:\users\kcfdkk\documents\bolt\main.cpp
+	<iostream>
+	"bolt_enor.h"
+
+1522146429 c:\users\kcfdkk\documents\bolt\bolt_enor.h
+	"infile.h"
+	"rendeles.h"
+	<cstdlib>
+
+1522146367 source:c:\users\kcfdkk\documents\bolt\bolt_enor.cpp
+	"bolt_enor.h"
+

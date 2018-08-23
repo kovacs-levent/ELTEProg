@@ -1,0 +1,12 @@
+KD 1
+KD 3
+KD 4
+KD 5
+TD 3
+TD 4
+TD 4
+TD 5
+HH 3
+HH 5
+HH 5
+HH 5

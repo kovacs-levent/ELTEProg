@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1523959117 source:c:\users\kcfdkk\downloads\shopping\customer.cpp
+	"customer.h"
+	<fstream>
+	<iostream>
+
+1523958270 c:\users\kcfdkk\downloads\shopping\customer.h
+	<vector>
+	<string>
+	"shop.h"
+
+1523958695 c:\users\kcfdkk\downloads\shopping\shop.h
+	<vector>
+	<string>
+	"goods.h"
+	"foods.h"
+	"technical.h"
+
+1523835553 c:\users\kcfdkk\downloads\shopping\goods.h
+	<string>
+
+1523958712 c:\users\kcfdkk\downloads\shopping\foods.h
+	<vector>
+	<string>
+	"goods.h"
+
+1523958716 c:\users\kcfdkk\downloads\shopping\technical.h
+	<vector>
+	<string>
+	"goods.h"
+
+1523957139 source:c:\users\kcfdkk\downloads\shopping\foods.cpp
+	"foods.h"
+	<fstream>
+
+1523959196 source:c:\users\kcfdkk\downloads\shopping\main.cpp
+	<iostream>
+	<vector>
+	"customer.h"
+	"shop.h"
+
+1523957166 source:c:\users\kcfdkk\downloads\shopping\technical.cpp
+	"technical.h"
+	<fstream>
+
+1523959187 source:c:\users\kcfdkk\downloads\shopping\shop.cpp
+	"shop.h"
+

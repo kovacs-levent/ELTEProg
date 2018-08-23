@@ -1,0 +1,5 @@
+
+*.exe
+00-Alapok/main.o
+00-Alapok/a/a.cbp
+00-Alapok/a/main.cpp

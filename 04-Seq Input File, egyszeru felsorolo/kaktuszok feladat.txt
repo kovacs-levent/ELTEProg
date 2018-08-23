@@ -1,0 +1,4 @@
+Adottak kaktuszok egy szekvenciális input fájlban: nevük, õshazájuk, viráguk színe, méretük
+	-készíts output fájlt a mexikói kaktuszokról
+	-készíts output fájlt a piros virágú kaktuszokról
+	-add meg, melyik mexikói kaktusz a legnagyobb

@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1520934014 source:c:\users\kcfdkk\documents\kaktuszok\infile.cpp
+	"infile.h"
+
+1520933806 c:\users\kcfdkk\documents\kaktuszok\infile.h
+	<fstream>
+	"kaktusz.h"
+
+1520933469 c:\users\kcfdkk\documents\kaktuszok\kaktusz.h
+
+1520936299 source:c:\users\kcfdkk\documents\kaktuszok\main.cpp
+	<iostream>
+	"infile.h"
+	"kaktuszEnor.h"
+	"outfile.h"
+
+1520934496 c:\users\kcfdkk\documents\kaktuszok\outfile.h
+	<fstream>
+	"kaktusz.h"
+
+1520934539 source:c:\users\kcfdkk\documents\kaktuszok\outfile.cpp
+	"outfile.h"
+
+1520936343 c:\users\kcfdkk\documents\kaktuszok\kaktuszenor.h
+	"infile.h"
+

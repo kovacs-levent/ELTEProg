@@ -1,0 +1,7 @@
+Adott egy bolt nyilvántartása két azonos formátumú inputfájlban az alábbi formában:
+A fájlban tetszõleges hosszúságú, számot nem tartalmazó string és egy egész szám van soronként. A string egy terméknevet azonosít, míg az egész a mennyiséget. Az elsõ fájlban a bolt nyitásakor meglévõ árukészletet kapjuk, míg a másodikban a nap folyamán az adott termékekbõl eladott mennyiség szerepel.
+
+Feladatok:
+1. Adjuk meg a nap utáni frissített nyilvántartást egy azonos formátumú output fájlban, az elfogyott termékeket ne írjuk bele a fájlba.
+
+2. Adjuk meg azt a terméket (ha volt ilyen), amelyikbõl a nap elején a legnagyobb mennyiség állt rendelkezésre, de a nap folyamán mégsem vásároltak belõle.
