@@ -20,6 +20,6 @@ Mint fent említve volt fent, a típusokat osztályként vagy structként érdem
 
 Háromféle láthatóság van a C++-ban, a public láthatósággal olyan adattagokat/függvényeket/eljárásokat ruházunk fel, amelyeket kívülről, a példányosított objektumokon keresztül is el kell tudnunk érni. Általában adattagokat ritkán ruházzuk fel public-al (ha nem egyszerű adatszerkezetekkel dolgozunk, amiket structba írunk), a függvényeken, eljárásokon keresztül kezeljük az objektumainkat.
 
-A protected láthatóság az öröklődésnél kel fontos, ld. 08/09-es órától.
+A protected láthatóság az öröklődésnél lesz fontos, ld. 08/09-es órától.
 
 A private láthatósággal azt ruházzuk fel, amit csakis a típuson belül, a típus saját eljárásai, függvényei érhetnek el (általában azért indokolt ez, hogy megelőzzük a nem célszerű működést azzal, hogy csak kontrolláltan módosulnak az adattagjaink az eljárásokon keresztül).
