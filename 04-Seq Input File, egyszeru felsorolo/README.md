@@ -4,4 +4,4 @@ A felsorolók (más néven: enumerator, iterator) olyan objektumok, melyek valam
 
 Egyszerű felsorolóknak nevezzük az olyan objektumokat, melyek szimplán csak bejárják a fájlt, a bejárt adatokon nem végeznek nagy módosítást. Más néven nevezetes felsorolónak nevezzük őket, pl. a szekvenciális input fájl felsorolója ilyen. A szekvenciális input fájl olyan szerkezetű fájl, melyben egymás után kövekteznek a felsorolandó adatok.
 
-A felsorolókat programozási tételekkel karöltve fogjuk használni, minden feladatot ezek segítségével kell megoldani. A programozási tételek struktogramjai megtalálhatóak a fenti pdf-ben. Ezek az algoritmusok elég univerzálisak, minden helyesen megírt felsorolóra működnek.
+A felsorolókat programozási tételekkel karöltve fogjuk használni, minden feladatot ezek segítségével kell megoldani. Ezek egyszerű feladatokat megoldó algoritmusokat jelentenek, és ilyen jellegű feladatokat fogunk megoldani a félév folyamán is. A programozási tételek struktogramjai megtalálhatóak a fenti pdf-ben. Ezek az algoritmusok elég univerzálisak, minden helyesen megírt felsorolóra működnek.
