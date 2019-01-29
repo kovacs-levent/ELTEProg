@@ -26,6 +26,6 @@ A virtual öröklődés többszintű öröklődésnél érdekes, ez azt biztosí
 Mi nem fogunk vele foglalkozni.
 
 A virtuális függvénye viszont a lények osztályban olyan függvény melyet nem definiálunk.
-A C++ ha a függvény után = 0 szerepel (tehát pl. void f() = 0;), akkor ez a függvény absztrakt függvény, vagyis nincs definíciója, nem is akarunk neki adni (nem tudunk).
+A C++-ban ha a függvény után = 0 szerepel (tehát pl. void f() = 0;), akkor ez a függvény absztrakt függvény, vagyis nincs definíciója, nem is akarunk neki adni (nem tudunk).
 Az ilyen absztrakt függvényeket tartalmazó osztályokat nem lehet példányosítani, viszont a gyerekosztályokat szeretnénk, tehát az absztrakt függvénnyel kezdeni kell valamit.
 Az absztrakt függvény ezért lesz virtuális, hogy a gyerekosztály felüldefiniálhassa (override) azt. Ha ez megvan, akkor a gyerekosztály már példányosítható.
