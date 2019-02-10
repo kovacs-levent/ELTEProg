@@ -29,7 +29,7 @@ Azonban fontos odafigyelni, hogy a bekérés körülményei megváltoztak, szük
 A fájl végét kell ellenőrizni (illetve egyéb formai követelményeket is lehetne még check-olni), ha vége a fájlnak, ne olvassunk többet.
 A istream (inputstream) objektumoknak vannak különféle  fail(), eof(), stb. függvényeik, ezzel tudjuk ellenőrizni a stream állapotát.
 A beolvasás többféle módon megvalósítható ezekkel, mi most egy fail()-al való változatot nézünk meg. A fenti állapotfüggvények logikai értékűek, és általában valamilyen állapotbit-et (flag) ellenőriznek.
-Akkor igaz, hogyha valamilyen művelet hibával végződött Pl.: fájlt akarumk nyitni, de a fájl nem létezik, olvasni akarunk, de már nincs adat stb.
+A fenti fail() függvény pl. akkor igaz, hogyha valamilyen művelet hibával végződött Pl.: fájlt akarumk nyitni, de a fájl nem létezik, olvasni akarunk, de már nincs adat stb.
 
 # Órai feladat
 Legmagasabban fekvő horpadás keresése. Egy felszínen adott távolságonként mérték a tengerszint feletti magasságot.
