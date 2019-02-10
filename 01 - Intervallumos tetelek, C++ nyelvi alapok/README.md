@@ -31,6 +31,14 @@ A istream (inputstream) objektumoknak vannak különféle  fail(), eof(), stb. f
 A beolvasás többféle módon megvalósítható ezekkel, mi most egy fail()-al való változatot nézünk meg. A fenti állapotfüggvények logikai értékűek, és általában valamilyen állapotbit-et (flag) ellenőriznek.
 A fenti fail() függvény pl. akkor igaz, hogyha valamilyen művelet hibával végződött Pl.: fájlt akarumk nyitni, de a fájl nem létezik, olvasni akarunk, de már nincs adat stb.
 
+# Vector
+A C++-ban megvalósítottak sokfajta úgynevezett Container típust osztályként a standard könyvtárba (osztályokról következő órán lesz szó), melyekből az egyik a vector.
+A tömb helyett ebben a félévben ezt fogjuk használni, a vector sokkal rugalmasabb a tömbnél, mérete dinamikusan nő (nem kell előre tudni, vagy bekérni a méretét a bemenetnek), viszont tárolása hasonló a tömbhöz (egymás után helyezkednek el az adatok, a \[\] operátorral és indexekkel hivatkozhatunk az elemekre).
+
+A plusz újdonság, hogy mivel ez egy magasabb szinten megvalósított típus, ezért vannak külön függvényei melyeket használhatunk, ami a tömbnél nem elérhető. A vectornak például bármikor lekérdezhetjük a méretét egy egyszerű size() függvényhívással, míg a tömbnél ez nem olyan egyszerű, főleg ha át szeretnénk azt adni paraméternek (megoldható, de a méretet nem tudjuk egy egységbe tárolni a tömbbel). Az órai kódban még a push_back()-et használjuk, ez a vector végére behelyez egy új elemet. Általában ezt használjuk egy vector feltöltésére, mivel ez rugalmasabb. A tömböknél használt fix indexekkel való feltöltés kihasználta azt, hogy tudjuk mennyi adatunk van. 
+
+Ezen kívül még rengeteg vector-ral használható osztályfüggvény és algoritmus van implementálva a C++ standard könyvtárában, a félév folyamán többel is meg fogunk ismerkedni.
+
 # Órai feladat
 Legmagasabban fekvő horpadás keresése. Egy felszínen adott távolságonként mérték a tengerszint feletti magasságot.
 Horpadásnak veszünk egy értéket, ha a körülötte (balra és jobbra) lévő magasságok nagyobbak ennél az értéknél.
