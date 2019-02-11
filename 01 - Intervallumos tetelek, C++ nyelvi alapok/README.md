@@ -29,7 +29,7 @@ Azonban fontos odafigyelni, hogy a bekérés körülményei megváltoztak, szük
 A fájl végét kell ellenőrizni (illetve egyéb formai követelményeket is lehetne még check-olni), ha vége a fájlnak, ne olvassunk többet.
 A istream (inputstream) objektumoknak vannak különféle  fail(), eof(), stb. függvényeik, ezzel tudjuk ellenőrizni a stream állapotát.
 A beolvasás többféle módon megvalósítható ezekkel, mi most egy fail()-al való változatot nézünk meg. A fenti állapotfüggvények logikai értékűek, és általában valamilyen állapotbit-et (flag) ellenőriznek.
-A fenti fail() függvény pl. akkor igaz, hogyha valamilyen művelet hibával végződött Pl.: fájlt akarumk nyitni, de a fájl nem létezik, olvasni akarunk, de már nincs adat stb.
+A fenti fail() függvény pl. akkor igaz, hogyha valamilyen művelet hibával végződött Pl.: fájlt akarunk nyitni, de a fájl nem létezik, olvasni akarunk, de már nincs adat, olyan típusba akarunk olvasni amit a streamből kapott adatból nem tudunk előállítani (pl. egy int-be szöveget olvasunk a fájlból) stb.
 
 # Vector
 A C++-ban megvalósítottak sokfajta úgynevezett Container típust osztályként a standard könyvtárba (osztályokról következő órán lesz szó), melyekből az egyik a vector (precízebben: std::vector, azaz az std (standard) névtérben lévő vector típus).
