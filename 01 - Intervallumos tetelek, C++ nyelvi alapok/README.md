@@ -13,7 +13,7 @@ Ez azért fontos, mert egyes műveletek változtathatják a változó értékét
 Az is előfordul, hogy a fentiek valamelyike úgy megy végbe, hogy nem számítunk rá, és a változás a program többi részének futását is befolyásolja.
 Ajánlott tehát ahol csak lehet const-ot írni, általánosan programokban lévő bugok egy jó része abból következik, hogy változók nem vártan módusulnak.
 
-## Megjegyzések.:
+## Megjegyzések
 
 1. Lehet const referenciát is csinálni, ekkor egy olyan paramétert kapunk, mely nem másolódik, és nem is módosítható
 2. Ha egy függvénynek referencia paramétere van, akkor a függvényhíváskor csakis olyan értéket adhatunk paraméternek, melynek van memóriacíme (általában a lényeg, hogy változók kell legyenek a paraméterek). 
