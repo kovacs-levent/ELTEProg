@@ -6,7 +6,9 @@ using namespace std;
 /// Horpadásnak veszünk egy értéket, ha a körülötte (balra és jobbra) lévõ magasságok nagyobbak ennél az értéknél.
 /// A feltételes maximum keresés programozási tétellel oldjuk meg a feladatot.
 
-void feltolt(std::vector<int> &v, const std::string filename)
+
+///Darabszám nélküli beolvasás, darabszámos beolvasás lásd: osztállyal való megoldás
+void feltolt(std::vector<int> &v, const std::string &filename)
 {
     std::ifstream file(filename.c_str());
     if(file.fail())
