@@ -26,9 +26,13 @@ A private láthatósággal azt ruházzuk fel, amit csakis a típuson belül, a t
 
 # Órai feladat
 
+## Pont
+
 Valósítsuk meg a pont típust, mely a síkbeli koordináta-rendszer pontjainak a kezelésére lesz alkalmas! Implementáljuk a következő műveleteket:
 - A pont koordinátáinak megváltoztatása
 - A pont koordinátáinak lekérdezése valamint kiírása
+
+## Kör
 
 Valósítsuk meg a kör típusát, amely használja a pont típust! Implementáljuk a következő műveleteket: 
 - A kör adatainak kiírása
