@@ -39,6 +39,13 @@ A plusz újdonság, hogy mivel ez egy magasabb szinten megvalósított típus, e
 
 Ezen kívül még rengeteg vector-ral használható osztályfüggvény és algoritmus van implementálva a C++ standard könyvtárában, a félév folyamán többel is meg fogunk ismerkedni.
 
+# Osztályokról röviden
+Az objektumorientált programozás egyik legsűrűbben használt eszköze az osztályok. Ezek olyan programkódok, melyek valamilyen objektumot valósítanak meg úgy, hogy az használható legyen a főprogramban, vagy akár kiterjeszthetőek legyenek további osztályok létrehozására. Egy osztálynak lehetnek adattagjai és tagfüggvényei, illetve az osztályt a nevével szokás azonosítani (több osztály esetén megköveteljük a név egyediségét, legalábbis egy névtéren belül). Az ilyen objektumoktól általában azt várjuk el, hogy egy logikailag jól elkülöníthető feladatot oldjanak meg a programban.
+
+A C++-ban ezeket class-ként valósítjuk meg, ennek a konstrukciónak a viselkedését bővebben a félév folyamán fogjuk mélyebben is tanulni. A class-okat, hogy használni is tudjuk példányosítani kell, ekkor kapjuk egy példányát az objektumunknak. A példány önmagába foglalja az összes class-ban definiált adattagot, tagfüggvényt, és ezeket a példányon keresztül tudjuk használni. Több példányt is készíthetünk, ekkor értelemszerűen a különböző adattagok minden példányra külön-külön létrejönnek, és a tagfüggvények a példány saját adataival dolgoznak. 
+
+Fontos megemlíteni, hogy a class-oknál előjön az adattagok és tagfüggvények láthatósága, C++-ban 3 féle láthatóságot különböztetünk meg: public, protected és private. A protected-ről a félév második felében fogunk részletesen tanulni. A public láthatóságú tagok az osztályban és a külső példányokon keresztül is elérhetőek, tehát ha példányosítjuk az objektumunk, akkor a publikus tagokon keresztül tudjuk ezt az objektumot ténylegesen használni kívülről. A private láthatóság azt jelenti, hogy az ilyen tagokat csak az osztályon belül érhetjük el, tehát csak az osztály tagfüggvényeiben lehet velük dolgozni. Pl. a jelenlegi kódban a Felszin objektumunk f példánya nem látja a vec és a filestream adattagjait az osztálynak (egyszer érdemes kipróbálni: mi a hibaüzenet, ha mégis megpróbáljuk ezeket az f-en keresztül elérni? Pl. ha ki akarjuk írni az f.vec egyik elemét?).
+
 # Órai feladat
 Legmagasabban fekvő horpadás keresése. Egy felszínen adott távolságonként mérték a tengerszint feletti magasságot.
 Horpadásnak veszünk egy értéket, ha a körülötte (balra és jobbra) lévő magasságok nagyobbak ennél az értéknél.
