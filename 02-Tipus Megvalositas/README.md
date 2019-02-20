@@ -26,13 +26,19 @@ A private láthatósággal azt ruházzuk fel, amit csakis a típuson belül, a t
 
 # Órai feladat
 
-Valósítsuk meg a pont típust, mely a síkbeli koordináta-rendszer pontjainak a kezelésére lesz
-alkalmas! Implementáljuk a pont koordinátáit megváltoztató, azt lekérdező valamint kiíró
-műveleteket.
+## Pont
 
-Valósítsuk meg a kör típusát, amely használja a pont típust! Implementáljuk a következő
-műveleteket: a kör adatainak kiírása, kör területének számolása, adott pontnak a középponttól mért távolsága
-ill. annak eldöntése, hogy egy adott pont rajta van-e a körön.
+Valósítsuk meg a pont típust, mely a síkbeli koordináta-rendszer pontjainak a kezelésére lesz alkalmas! Implementáljuk a következő műveleteket:
+- A pont koordinátáinak megváltoztatása
+- A pont koordinátáinak lekérdezése valamint kiírása
+
+## Kör
+
+Valósítsuk meg a kör típusát, amely használja a pont típust! Implementáljuk a következő műveleteket: 
+- A kör adatainak kiírása
+- A kör területének kiszámolása
+- Adott pontnak a középponttól mért távolságának kiszámolása
+- Annak eldöntése, hogy egy adott pont rajta van-e a körön
 
 ### Gyakorló feladat
 
@@ -40,3 +46,8 @@ Hozzuk létre a másodfokú polinomok típusát. Implementáljuk a következő m
 - Helyettesítési érték kiszámítása
 - Polinomok összeadása
 - Polinom szorzása számmal
+
+### Egyéb olvasmány/dokumentáció a fenti témakörökről
+Osztályok: http://www.cplusplus.com/doc/tutorial/classes/
+
+Több forrásfájlról és a header fájlokról: http://www.cplusplus.com/forum/articles/10627/
