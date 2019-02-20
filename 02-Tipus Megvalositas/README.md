@@ -31,6 +31,7 @@ A private láthatósággal azt ruházzuk fel, amit csakis a típuson belül, a t
 Valósítsuk meg a pont típust, mely a síkbeli koordináta-rendszer pontjainak a kezelésére lesz alkalmas! Implementáljuk a következő műveleteket:
 - A pont koordinátáinak megváltoztatása
 - A pont koordinátáinak lekérdezése valamint kiírása
+- Pontok összeadása, kivonása egymásból, +/- operátorral is
 
 ## Kör
 
@@ -39,6 +40,7 @@ Valósítsuk meg a kör típusát, amely használja a pont típust! Implementál
 - A kör területének kiszámolása
 - Adott pontnak a középponttól mért távolságának kiszámolása
 - Annak eldöntése, hogy egy adott pont rajta van-e a körön
+- Kör skálázása skalárral (sugár megszorzása számmal), * operátorral is, mindkét oldalról (kör\*szám, és szám\*kör is elfogadott)
 
 ### Gyakorló feladat
 
