@@ -40,3 +40,20 @@ double kor::tavolsag(const pont &p) const
 {
     return sqrt(pow(p.getX()-getkp().getX(),2.0)+pow(p.getY()-getkp().getY(),2.0));
 }
+
+kor kor::Scale(const double &s)
+{
+    kor k(kp, r*s);
+    return k;
+}
+
+kor operator*(kor lhs, const double &rhs)
+{
+    lhs.r*=rhs;
+    return lhs;
+}
+
+kor operator*(const double &lhs, kor rhs)
+{
+    return rhs*lhs;
+}

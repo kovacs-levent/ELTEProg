@@ -14,6 +14,13 @@ class pont
         void setX (const double a) {x=a;}
         void setY (const double b) {x=b;}
         void setXY (const double a,const double b) {x=a; y=b; }
+        ///Itt vitatható, hogy az Add és a Sub-nak az eredeti objektumot kellene-e változtatnia, vagy egy másolatot visszaadni
+        ///Jelen esetben új objektumot adunk vissza, de az is egy megoldás, hogy a meghívott objektumot változtatnánk inkább
+        ///Ez szoftvertervezési kérdés, tehát attól függ, hogy hogyan lesz használva a program...
+        pont Add(const pont &b);
+        pont Sub(const pont &b);
+        friend pont operator+(pont lhs, const pont &rhs);
+        friend pont operator-(pont lhs, const pont &rhs);
 };
 
 #endif // PONT_H_INCLUDED

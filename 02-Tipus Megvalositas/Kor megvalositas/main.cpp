@@ -36,7 +36,20 @@ int main()
     double kpX, kpY;
     std::cin >> kpX >> kpY;
     kor k(kpX,kpY,r);
+    k.Kiir();
+    (k*5).Kiir();
+    (10*k).Kiir();
     std::vector<pont> v;
     Beker(v);
+    for(unsigned int i = 0; i < v.size(); i++)
+    {
+        v[i].kiir();
+    }
+    std::cout << std::endl;
+    for(unsigned int i = 0; i < v.size() -1; i++)
+    {
+        (v[i]+v[i+1]).kiir();
+        (v[i]-v[i+1]).kiir();
+    }
     return 0;
 }

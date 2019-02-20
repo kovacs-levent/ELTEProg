@@ -34,5 +34,10 @@ class kor
         void Kiir() const;
         double tavolsag(const pont &p) const;
         double Terulet() const;
+        ///Ugyanúgy kérdéses, hogy az eredetit változtassa-e vagy újat adjon vissza, mint a pontoknál az Add és Sub függvényekkel
+        ///Attól függ...
+        kor Scale(const double &s);
+        friend kor operator*(kor lhs, const double &rhs);
+        friend kor operator*(const double &lhs, kor rhs);
 };
 #endif // KOR_H_INCLUDED
