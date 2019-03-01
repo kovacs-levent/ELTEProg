@@ -18,3 +18,15 @@ Ha check kifejezés igaz, akkor a program sikeres, ha hamis, akkor megbukott a t
 
 Az nyilvánvaló cél az, hogy az összes felállított teszteseten átmenjen a program, különben valahol bug van a kódban.
 A C++ kódok teszteléséhez a Catch keretrendszert fogjuk használni, mely elérhető a https://github.com/catchorg/Catch2 repon.
+
+# Kivételkezelés
+A programok tervezése közben megállapítjuk a műveletekről, hogy milyen bemenetre, vagy milyen körülmények között kell annak ténylegesen jó eredményt adni. Pl.: Az intervallumos maximum kiválasztás progtétel csak nem üres intervallumon működik, üreseken nem elvárt, hogy egy maximális elemet visszakapjunk. Azonban ezeknek a megvalósított eljárásoknak a meghívását nem tudjuk korlátozni, a fenti példával: előfordulhat, hogy valaki egy egész számokat tartalmazó vektorokra megvalósított maxkert meghívja egy üres vektorra. Az is lehet, hogy memóriakezelési hiba adódik, az operációs rendszer nem enged valamilyen műveletet stb. Az eddigi programokban szimplán kiléptünk, ha hiba adódott, de ez a fajta hibakezelés nem igazán felhasználóbarát. Nem minden hiba ugyanolyan mértékű, nem kell kilőni minden esetben a programot, a kivételes eseteket le lehetne kezelni.
+
+A C++-ban a fenti kivételkezelést try-catch blokkokkal, illetve throw utasításokkal valósítjuk meg. A try-blokka helyezett kódra figyeljük a kivételeket, ha bármilyen jellegű kivételt dob a kód, akkor a vezérlés átkerül a catch-blokkhoz (kivételkezelő). Ha nem adódik hiba, akkor a program normálisan fut tovább, a kivételkezelő kódját nem hajtja végre. A kivételeket a throw utasítással dobjuk ez bármilyen kifejezést kaphat paraméternek throw <kif>; alakban írjuk le, és ekkor a kifejezés értéke lesz a hibajelzés. A catch blokkban megmondhatjuk, hogy milyen típusú kivételeket szeretnénk lekezelni és minden típusra külön kódot tudunk végrehajtani.
+  
+A fentiekre pár példát feltöltöttem a mappába.
+
+### Egyéb olvasmány, dokumentáció a fenti témakörökről
+Egységtesztelésről: http://softwaretestingfundamentals.com/unit-testing/
+
+Kivételkezelésről: http://www.cplusplus.com/doc/tutorial/exceptions/
