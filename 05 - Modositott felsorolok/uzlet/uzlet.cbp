@@ -33,6 +33,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="szamla.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="szamla_enor.cpp" />
+		<Unit filename="szamla_enor.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -26,13 +26,25 @@ void szamlaEnor::Next()
 
 void szamlaEnor::Read()
 {
-    std::string str;
-    getline(ifstr, str);
-    std::istringstream sstr(str);
-    sstr >> dx.vevo;
+    std::string tmp_str;
+    getline(ifstr, tmp_str);
+    std::istringstream sstr(tmp_str);
+    std::ostringstream name_str;
+    std::string name, puffer;
+    sstr >> name;
+    sstr >> tmp_str;
+    sstr >> puffer;
+    while(!isNumber(puffer))
+    {
+        name += " " + tmp_str;
+        tmp_str = puffer;
+        sstr >> puffer;
+    }
+    dx.vevo = name;
     vetel tmp;
-    sstr >> tmp.termek;
-    sstr >> tmp.ar;
+    tmp.termek = tmp_str;
+    tmp.ar = atoi(puffer.c_str());
+    ///C++11-es konverzió (ehhez include-olni kell a string header-t): tmp.termek = std::stoi(puffer);
     dx.osszeg = 0;
     while(!sstr.fail())
     {
@@ -40,4 +52,16 @@ void szamlaEnor::Read()
         sstr >> tmp.termek;
         sstr >> tmp.ar;
     }
+}
+
+bool szamlaEnor::isNumber(const std::string &str)
+{
+    bool l = true;
+    unsigned int i = 0;
+    while(l && i < str.length())
+    {
+        l = isdigit(str[i]);
+        ++i;
+    }
+    return l;
 }

@@ -20,6 +20,7 @@ public:
         return dx;
     }
     void Read();
+    bool isNumber(const std::string &str);
 private:
     szamla dx;
     Status sx;
