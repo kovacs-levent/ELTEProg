@@ -16,6 +16,18 @@ A stringstream két irányú, a másik kettő értelemszerűen input és output 
 
 A stringstream-eket általában ilyen feladatokra használjuk, hogy valamilyen formátumú string-et átformázzunk úgy, hogy az nekünk kezelhető legyen.
 
+# Pufferelés
+
+Előfordulhat, hogy egy fájlban egy adattag több tagból áll mint 1. Ez főként string-eknél jellemző, eddig feltettük, hogy a szöveges elemek amiket beolvasunk egyszavasak. Szeretnénk nagyobb rugalmasságot, speciális adatoknál (pl. név) meg akarjuk engedni, hogy több tagú is lehessen a string (de továbbra is legalább 1 szó), de nem szeretnénk extra delimiter karaktereket bevezetni a fájlba, ha nem muszáj. Ha az adatok formátuma engedi, akkor van lehetőségünk a fentire, de extra ötletre van szükségünk, a fix számú adat beolvasása nem elég.
+
+A több szóból álló stringeket pufferelni (buffering) fogjuk. Ahhoz hogy ezt megtehessük olyan konvenció kell, amiben meg tudjuk határozni, hogy mikor legyen vége a pufferelésnek pl. ha tudjuk, hogy a többszavas string után egy szám jön, akkor addig kell pufferelni míg a számhoz nem értünk. Végiggondolva a pufferelést akkor vethetjük tehát be, ha: a fájl tartalmában nincs egymás után két változó számú szóból álló string, úgy, hogy a köztük lévő adattagok mind stringek. Ellenpélda pl. egy többszavas string, egyszavas string, többszavas string formátum, ekkor nem tudjuk kikövetkeztetni az első string végét, hiába fix hosszú a középső string.
+
+Ha tehát szabályos a fájlunk, akkor tudunk felső korlátot mondani arra, hogy meddig kell olvasni, hogy eldönthessük a string végén vagyunk-e, mivel mindenképp lesz olyan adat ami nem szöveg. Tekintve az órai feladatot azt szeretnénk megoldani, hogy a név tetszőleges számú szóból állhasson. A név után egyszavas string-ek és int-ek jönnek egymás után páronként (termék, ár). Előre szeretnénk olvasni a fájlban, és közben felépíteni a név string-et az előreolvasás eredménye szerint. Ez is egy fajta pufferelés. Általánosan a pufferelés olyan módszer ahol adatot szeretnénk továbbítani két médium között (jelen esetben egy string változó és egy filestream között), de a küldés nem közvetlenül történik, hanem csak ideiglenes letárolás után (a letárolás célja sokféle lehet).
+
+Nyilvánvalóan egy előreolvasás nem lesz elég, el tudjuk dönteni előbb utóbb, hogy véget ért a string, de nem tudjuk, hogy a hozzáfűzést mikor kell abbahagyni, csak amikor egy int-et olvasunk. Ekkor viszont az előző string már a termék volt és a számlázhoz tartozik, nem a névhez. Utólag lebonthatnánk ugyan a stringet és kinyerhetnénk az áru nevét, de ez nem túl elegáns és felesleges bonyolultságot idéz. Két pufferelő változó kell tehát, és a második puffer eredménye szerint folytatjuk a fűzést. Ha a 2. változó még string, akkor tudjuk, hogy az első puffer tartalma a név része, tehát hozzáfűzhetjük.
+
+Hasonló logikával a fenti formátumú fájlokban mindig lehet megfelelő pufferelő algoritmust írni. Ennek a módszernek a másik korlátja a memória és a hibakezelés. Ha túl sokat kell pufferelni egy huzamban, akkor nem ússzuk meg delimiterek nélkül, illetve pufferelés közben nem lehet visszatérni ha hibás adatot kapunk, az összegyűjtott adat használhatatlan, el kell dobni.
+
 # A módosított felsoroló
 
 Nyilvánvalóan a felsoroló továbbra is meg tudja ezeket oldani, egyedül a Read() függvényünk lesz bonyolultabb, ami így már szintén egy programozási tételre hajaz. Jelen esetben összegezzük az árakat a számlán, hogy megkapjuk a végösszeget.
