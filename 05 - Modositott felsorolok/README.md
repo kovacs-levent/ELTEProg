@@ -38,8 +38,7 @@ Ezeket az elveket általánosan is be kell tartani, értelmezzük a feladatot mi
 
 # Órai feladat
 
-Adott egy üzlet aznapi forgalma: számlák sorozata, ahol egy számlán szerepel a vásárló neve, az általa vásárolt termékek neve és ára. Elsőre feltesszük, hogy a vásárló neve, és az áruk neve egy szóból áll. Mennyi
-az aznapi bevétel?
+Adott egy üzlet aznapi forgalma: számlák sorozata, ahol egy számlán szerepel a vásárló neve, az általa vásárolt termékek neve és ára. A vásárló neve tetszőleges szószámú string, és az áruk neve egy szóból áll. Mennyi az aznapi bevétel?
 
 ### Egyéb olvasmány/dokumentáció a fenti témakörökről
 
