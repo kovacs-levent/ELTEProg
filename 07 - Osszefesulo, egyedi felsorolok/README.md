@@ -9,9 +9,12 @@ Az első kérdés, hogy mi alapján olvassunk. Mivel a fájljaink rendezettek, e
 Az, hogy a fenti eseteknél az olvasáson túl milyen műveletet hajtunk végre, illetve, hogy mi a megállási feltétel az feladatfüggő, ilyenekre nézünk pár példát.
 
 # Órai feladat
-
+## Összefésülés
 Két egyszerű feladatot oldunk meg, adott két rendezett inputfájl melyekben egész számok szerepelnek. A feladatok:
 
 1. Készítsünk felsorolót, mely felsorolja a két inputfájlban lévő elemek unióját.
 
 2. Készítsünk felsorolót, mely felsorolja a két inputfájlban lévő elemek metszetét.
+
+## Egyedi felsoroló
+Egy szekvenciális inputfájlban vadászok adott napi vadászatain elejtett zsákmányait (fajtanév és súly párok formájában) vadászok szerint rendezetten tároljuk. Igaz-e, hogy minden vadász valamelyik vadászatán lőtt medvét?
