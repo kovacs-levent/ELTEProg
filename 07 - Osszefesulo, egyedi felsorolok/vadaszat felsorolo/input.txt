@@ -1,0 +1,5 @@
+Bill Boleny 1000 Boleny 1300
+Bill Boleny 1000 Medve 500
+Hemingway Oroszlan 400 Antilop 300 Zebra 200
+Laci Oz 200 Nyul 50
+Laci Medve 500 Szarvas 300 Oz 100
