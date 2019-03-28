@@ -9,7 +9,7 @@ int main()
     enor.First();
     while(!enor.End())
     {
-        if(enor.Current().isWritten)
+        if(!enor.Current().isWritten)
         {
             std::cout << enor.Current().value << " ";
         }
