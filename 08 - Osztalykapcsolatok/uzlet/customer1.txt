@@ -1,0 +1,8 @@
+Sample_Customer
+Apple
+Pear
+Lamp
+Matches
+Cola
+Telephone
+Juice

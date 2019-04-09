@@ -1,0 +1,7 @@
+Pear 320
+Bread 150
+Pear 310
+Apple 450
+Vodka 2000
+Apple 135
+Cola 350
