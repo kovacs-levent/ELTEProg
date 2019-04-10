@@ -1,0 +1,24 @@
+# Osztályok közti kapcsolatok
+
+Az eddigi órákon láttuk, hogy az önálló osztályokat hogyan lehet megvalósítani egy adott feladat megoldására pl.: típus ábrázolására (PrSor), szabályozott adatfeldolgozásra (felsorolók), stb.
+Nyilvánvalóan az osztályokat azért szeretjük használni, mert egy jól elkülöníthető logikai és funkcionális egységet valósítanak meg, eredményképpen a megvalósított kód:
+1. Olvasható és szervezett: Külön header és forrásfájlok (az osztály kódja nem függ a főprogramtól, így szétválasztható), jól elkülönített kódrészletek a rendszer egységeire
+2. Jól karbantartható: A hibákat elég az adott objektum szintjén, az osztály kódjában javítani
+3. Skálázható: Ha megvan a megvalósított osztály, akkor nem kell mindig újraírni, ha használni szeretnénk. Elég include-olni a deklarációját a projektbe, majd fordításkor hozzáfordítani a definíciókat, a bővítéseknek elég tehát az új funkcionalitással törődni (illetve azzal, hogy ez hogyan integrálódik az eddigi programba). Pl.: Mi lenne, ha mindig meg kéne írni, vagy copy paste-lni a vector osztály kódját amikor egy dinamikusan bővülő tömböt akarunk használni?
+
+Bonyolultabb feladatoknál is igyekszünk úgy elkülöníteni a dolgokat, hogy a fenti irányelveknek eleget tegyünk (nem akarjuk megnehezíteni a saját dolgunkat), eredményképpen több osztályt is be kell vezethetünk (nem érdemes írni egy gigantikus osztályt, mert azzal sértjük a jól szervezettséget, egy osztály/objektum egy fajta feladatot lásson el), amik viszont ahhoz, hogy ellássák a teljes feladatot valamilyen módon együtt kell működjenek (ez a feladattól függ). Ezen kapcsolatok és az osztályok modellezésére használhatóak az UML (Unified Modeling Language) diagrammok.
+
+# Kapcsolatok típusai
+
+A kapcsolatok sokfélék lehetnek, ezek típusai általában a feladattól és az megvalósítástól is függ (nem csak egyfajta implementáció helyes az adott feladat megoldására). A kapcsolatok típusai:
+
+1. Függőség: Akkor beszélünk függőségről, mikor egy objektum bármilyen részmetódusa igényli egy másik objektum meglétét a metódus futása alatt (pl. paraméterként megkapja).  Példa az órai feladatból: Ahhoz, hogy egy vásárló (Customer objektum) vásárolni tudjon (purchase függvény), ahhoz egy Shop objektum is kell (valahol vásárolnia kell, bolt nélkül nincs vásárlás).
+2. Asszociáció: Akkor beszélünk asszociációról, ha valamilyen objektumnak a működése függ egy másik objektumétól, úgy, hogy ez a működési függőség állandó (egy objektum a másik nélkül nem is tud létezni). Példa az órai feladatból: Ahhoz, hogy a vásárló (Customer) vásárolni tudjon árukat (Product), ahhoz szükségünk van az áru objektumra.
+3. Aggregáció: Aggregációnak hívjuk azt, amikor egy objektum része, tulajdona egy másik objektumnak. Az aggregáció úgy feltételezi ezt a relációt, hogy egy adott objektum akár több másik objektumnak is része lehet, illetve a létezése nem kötött a tartalmazó objektumhoz. Az órai feladatban most nincs ilyen, de egy egyszerű példa: Egy cég működéséhez emberek kellenek, ezeket az embereket a cég "tartalmazza", mint alkalmazott. Ha a cég megszűnik, attól még az alkalmazott emberek továbbra is léteznek, de a cégnek már nem részei.
+4. Kompozíció: Felfogható szigorú aggregációnak is, kompozíció áll fenn két objektum között, ha az egyik objektum tartalmazza a másikat, viszont a tartalmazott objektum önállóan nem bír jelentőséggel a rendszerbe (nem létezhet önállóan). Pl.: A bolt (Shop) két részleget (Department) tartalmaz, melyek az élelmiszeri és technikai részlegek. A részlegeknek önmagában nincs szerepe a rendszerben, csakis a bolt részlegeként fogható fel.
+5. Származtatás (öröklődés): Ha egy objektum más objektumot használ alapként, vagyis örökli a szülő objektum tulajdonságait (metódusok, adattagok). Ezeket a gyerek objektum kiegészítheti, vagy módosíthatja. Erről bővebben majd következő órán.
+
+Minden objektumorientált alkalmazás, vagy projekt fejlesztésnél cél, hogy a fentiekkel jól tervezzük meg, vagy térképezzük fel az osztályok (kívánt) kapcsolatait, és a hierarchiát. A megfelelő tervezéssel a fenti három irányelvnek eleget tudunk tenni, mely nagyban megkönnyíti és gyorsítja az alkalmazások fejlesztését és utólagos módosításait. A különálló objektumok megvalósítása sokkal egyszerűbb, mint a rendszer egészét megírni egy egységként.
+
+# Órai feladat
+Egy kisvárosi üzlet élelmiszer részlegből és műszaki részlegből áll. A vásárlók egy bevásárlólistára felírták azon termékek neveit, amit megvennének. Az üzletben a listájukon szereplő termékeket keresik: először az élelmiszer részlegen nézik végig a teljes bevásárlólistát, és a megtalált termékeket magukhoz veszik (beteszik a kosarukba), majd a műszaki részlegen ezt megismétlik, de óvatosabban: ha egy (a bevásárlólistán szereplő) áruból több is van a részlegen, akkor a legolcsóbbat választják.
