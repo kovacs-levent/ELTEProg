@@ -10,6 +10,10 @@ class Customer
 public:
     Customer(const std::string &fname);
     void purchase(Store &store);
+    void putInCart(const Product &p)
+    {
+        basket.push_back(p);
+    }
     friend std::ostream &operator<< (std::ostream &os, const Customer &c);
 
 private:

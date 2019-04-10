@@ -62,7 +62,7 @@ void Customer::purchase(Store &store)
         int j;
         if(linsearch(list[i], store.foodDept, j))
         {
-            basket.push_back(store.foodDept.getProduct(j));
+            putInCart(store.foodDept.getProduct(j));
             store.foodDept.removeGoods(j);
         }
     }
@@ -71,7 +71,7 @@ void Customer::purchase(Store &store)
         int j;
         if(minsearch(list[i], store.engDept, j))
         {
-            basket.push_back(store.engDept.getProduct(j));
+            putInCart(store.engDept.getProduct(j));
             store.engDept.removeGoods(j);
         }
     }
